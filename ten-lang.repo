@@ -1,0 +1,5 @@
+[ten-lang]
+name=ten-lang
+enabled=1
+gpgcheck=0
+baseurl=https://raw.githubusercontent.com/ten-lang/rpm-repo/master/
