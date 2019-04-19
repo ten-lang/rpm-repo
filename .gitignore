@@ -1,0 +1,7 @@
+gen/BUILD/**
+gen/BUILDROOT/**
+gen/SOURCES/**
+gen/SPECS/**
+gen/RPMS/**
+gen/SRPMS/**
+
