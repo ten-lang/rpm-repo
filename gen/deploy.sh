@@ -1,3 +1,4 @@
 #!/bin/sh
-cp RPMS/*/*.rpm ../
-createrepo ..
+cd ..
+cp gen/RPMS/*/*.rpm ./
+createrepo -x gen/ ..
