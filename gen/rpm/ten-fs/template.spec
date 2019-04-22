@@ -12,6 +12,8 @@ BuildRequires:  make gcc binutils tar libten
 # debuginfo.sh isn't good at detecting debug info instatic libraries.
 %global debug_package %{nil}
 
+%define _installpath %{_libdir}/ten/fs/%(echo ${VER} | tr . -)/
+
 %description
 
 
@@ -20,17 +22,16 @@ BuildRequires:  make gcc binutils tar libten
 
 %build
 make
-make PROFILE=debug
 
 
 %install
-mkdir -p %{buildroot}/%{_libdir}/ten/
-cp fs.so %{buildroot}/%{_libdir}/ten/
+mkdir -p %{buildroot}/%{_installpath}/
+cp fs.so %{buildroot}/%{_installpath}/
 
 
 %files
 %license LICENSE
-%{_libdir}/ten/
+%{_installpath}/fs.so
 
 %changelog
 ${LOG}
