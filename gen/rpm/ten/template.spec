@@ -7,7 +7,7 @@ License:        MIT
 URL:            https://github.com/ten-lang/ten
 Source0:        https://github.com/ten-lang/ten/archive/v${VER}.tar.gz
 BuildRequires:  make gcc binutils tar libten libtml readline
-Requires:       libten libtml readline
+Requires:       libten >= ${VER} libtml readline
 
 %description
 
