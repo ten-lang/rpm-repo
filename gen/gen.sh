@@ -1,7 +1,7 @@
 #!/bin/sh
 PRO=$1
 URL=https://github.com/ten-lang/$PRO/
-TAG=$(git ls-remote --tags $URL | sort -r | awk 'FNR == 1' | sed 's/.*\///')
+TAG=$(git ls-remote --tags $URL | awk '{ print $2 }' | sort -r | awk 'FNR == 1' | sed 's/.*\///')
 VER=$(echo $TAG | sed 's/v//')
 GEN=$(pwd)
 LOG=$(cat rpm/$PRO/changelog.txt)
